@@ -13,7 +13,7 @@ accountEmail = "ah123@gmail.com"
 accountPassword = "212121"
 accountCity = "Delhi"
 
-/*
+/*notes
 Prefer not to use var
 because of issue in block and functional scope
 

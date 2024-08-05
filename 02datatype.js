@@ -14,7 +14,8 @@ let name = "Hamesh"
 let age = 28
 let isLoggedIn = false
 
-/*
+/*notes
+
 primitive data type
 number=> 2 to power 53 this is a range that can use memory address  
 bigint => use to store large number
@@ -25,7 +26,7 @@ null=> standlone value(empty)
 symbols => unique
 */
 
-/*
+/*notes
 Non Primitive data type
 Object
 */
