@@ -16,6 +16,7 @@ accountCity = "Delhi"
 /*notes
 Prefer not to use var
 because of issue in block and functional scope
+let and const is block type we cant access it outside of block
 
 
 */
