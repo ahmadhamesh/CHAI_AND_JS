@@ -58,5 +58,8 @@ const myn2 = myArr.splice(1, 3) //Removes elements from an array and, if necessa
 console.log("C", myArr) //splice remove the array and manipulate the orignal array is removed array but in slice not manipulate orignal array
 console.log(myn2)
 
+/*
+interview question slice and splice
+*/
 
 
