@@ -1,3 +1,5 @@
+//primitive, non-primitiive
+
 "use strict" //treat all js code as a newer version
 
 

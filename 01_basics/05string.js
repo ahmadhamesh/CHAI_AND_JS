@@ -1,3 +1,6 @@
+// topics
+//
+
 const name = "Ahmad"
 const repoCount = 50
 
@@ -34,7 +37,7 @@ console.log(newStringOne.trim())
 
 const url = "https://ahmad.com/ahmad%20hamesh"
 
-console.log(url.replace('%20', '-')) //replacce
+console.log(url.replace('%20', '-')) //replace
 
 console.log(url.includes('sunder')) //serach the things
 

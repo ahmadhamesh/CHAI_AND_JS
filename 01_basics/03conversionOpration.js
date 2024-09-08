@@ -1,3 +1,5 @@
+// topics
+// conversion, typeof, maths operations , postix, prefix
 let score = "Hamesh"
 
 // console.log(typeof score)

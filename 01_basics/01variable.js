@@ -1,4 +1,5 @@
-//let var const
+//topics
+//let, var, const
 
 const accountId = 143232
 let accountEmail = "ahmad12@gmil.com"
