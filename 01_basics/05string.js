@@ -1,5 +1,5 @@
 // topics
-//
+//backticks or string interpolation, charAt,indexOf ,toUpperCase,charAt,indexOf,substring, slice ,trim, replace, includes, split
 
 const name = "Ahmad"
 const repoCount = 50

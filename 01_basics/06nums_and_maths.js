@@ -1,7 +1,10 @@
+//topics
+//
+
 const score = 400
 console.log(score);
 
-//
+// defining data type number
 const balence = new Number(100)
 console.log(balence)
 

@@ -3,10 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM Learning
+            <span style="display: none;">test content</span>
+        </h1>
+        <h2>DOM heading2</h2>
+        <h2>DOM heading 3</h2>
+        <h2>DOM heading 4</h2>
+        <p>Learning DOM Document Module Object</Object></p>
+        <input type="password">
+
+        <ul>
+            <li class="list-item">ONE</li>
+            <li class="list-item">TWO</li>
+            <li class="list-item">THREE</li>
+            <li class="list-item">FOUR</li>
+        </ul>
+    </div>
+
+    <script>
+    //    const myId = document.getElementById('title').id
+    //    console.log(myId);
+    //    myId = document.getElementById('title').className
+    //    console.log(myId);
+    // myId = document.getElementById('title').getAttribute('id')
+    // console.log(myId);
+    // myId = document.getElementById('title').getAttribute('class')
+    // console.log(myId);
+
+    // myId = document.getElementById('title').setAttribute('class', 'test')
+    // console.log(myId);
+    // const newId = document.getElementById('title').className
+    // console.log(newId);
+
+    // const title = document.getElementById('title')
+    // title.style.backgroundColor = 'green'
+    // title.style.padding = '15px';
+    // title.style.borderRadius = '15px'
+    // title.innerHTML
+    // console.log(title);
     
+    // title.innerText
+    // console.log(title)
+    // title.textContent
+    // console.log(title)
+    
+    // document.getElementsByClassName('heading')
+
+    // document.querySelector('h2') //select first h1
+    // document.querySelector('#title')
+    // document.querySelector('.heading')
+    // document.querySelector('input[type="password"]')
+
+    // document.querySelector('p:first-child')
+    
+    // const myul = document.querySelector('ul')
+    // const turnGreen = myul.querySelector('li')
+    // turnGreen.style.color = "green"
+    // turnGreen.style.padding = "15px"
+    // turnGreen.innerText = "once"
+
+    // const myAllH = document.querySelectorAll('h2')
+    // console.log(myAllH);
+
+    
+    // const tempList = document.querySelectorAll('li')
+    // // tempList.style.color = 'green' //this will not change get error
+    // tempList[1].style.color = 'green'
+    
+    //querySelectorAll using forEach
+    // const tempList = document.querySelectorAll('li')
+    // tempList.forEach( function(l){
+    //     l.style.backgroundColor = "green"
+    //     l.style.color = "yellow"
+    // })
+    
+
+    //this is wrong get error you cant use like this forEach you have to change this in array
+    // const tempClassList = document.getElementsByClassName('list-item')
+    // tempClassList.forEach(function(li) {
+    //     console.log(li)
+    // });
+    //right way to use to convert into array
+    const tempClassList = document.getElementsByClassName('list-item')
+    const myConvertedArray =  Array.from(tempClassList)
+    console.log(myConvertedArray);
+    myConvertedArray.forEach(function(li){
+        li.style.color = "blue"
+    })
+        
+    
+
+    </script>
     
 </body>
 </html>
