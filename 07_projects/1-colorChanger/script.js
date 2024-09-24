@@ -10,7 +10,7 @@ buttons.forEach( function (btn){
         console.log(e.target);
         if(e.target.id === 'grey'){
             // body.style.backgroundColor = 'grey'
-            body.style.backgroundColor = e.target.id //its select only id thats also a color name
+            body.style.backgroundColor = e.target.id //its select only id thats also a color name its aready same color used 
         }
         if(e.target.id === 'white'){
             body.style.backgroundColor = e.target.id
@@ -26,3 +26,5 @@ buttons.forEach( function (btn){
         }
     })
 })
+
+
