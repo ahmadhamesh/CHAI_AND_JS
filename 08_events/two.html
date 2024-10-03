@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    <script>
+        // blocking code vs non blocking code
+        //blocking code -> Block the flow of program -> Read file sync
+        //non blockig code -> donot block execution -> Read file Async
+
+
+
+        //setTimeout & clearTimeout
+        // setTimeout(function () {
+        //     console.log('Ahmad Hamesh');
+            
+        // },2000)
+        //both are same
+        const sayHamesh = function () {
+            console.log('Ahmad Hamesh');
+            
+        }
+        setTimeout(sayHamesh ,2000)
+
+        const changeText = function () {
+            document.querySelector('h1').innerHTML = 'best js series'
+        }
+         const chnageMe = setTimeout(changeText, 3000)
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(chnageMe)
+            console.log('stopped');
+            
+        })
+
+    </script>       
+</body>
+</html>
