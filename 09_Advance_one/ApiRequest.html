@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+              
+             width: 300px;
+                height: 400px;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border: 2px solid white;
+                padding: 5px;
+              }
+            .container {
+                padding: 2px 16px;
+                
+              }
+
+    </style>
+</head>
+
+<body style="background-color: #212121; color: #fff">
+    <pre>Value           State	        Description
+    0	        UNSENT	        Client has been created. open() not called yet.
+    1	        OPENED	        open() has been called.
+    2	        HEADERS_        RECEIVED	send() has been called, and headers and status are available.
+    3	        LOADING	        Downloading; responseText holds partial data.
+    4	        DONE	        The operation is complete.
+</pre>
+photo url
+1 card
+inside thhe card photo and followers should be shown
+
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+
+<div class="card">
+    <img src="img_avatar.png" alt="image" id="image" style="width: 100%;">
+    <div class="container">
+        <h4>John Doe</h4>
+        <p>Architect & Engineer</p>
+
+    </div>
+</div>
+
+<script>
+    //ready state
+
+    // Creating the XMLHttpRequest Object
+    const requestUrl = 'https://api.github.com/users/ahmadhamesh'
+
+    // Setting Up the Request
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+
+    // to contineously track the states use onreadystatechange
+    xhr.onreadystatechange = function(){
+    console.log(xhr.readyState); //Logs the readyState changes (1, 2, 3, and 4)
+        if (xhr.readyState === 4) {
+            // const data = this.responseText// this is giving us undefined bcoz of datatype
+            // Processing the Response
+            const data = JSON.parse(this.responseText) //convert into json or object
+            console.log(data); //Logs the entire parsed data object
+            console.log(typeof data); //Logs the type of the data object, which should be 'object'
+            console.log(data.followers); // Logs the number of followers for the user from the parsed response
+            //project to add image,x name, followers and url
+            // After you fetch data : 
+            document.querySelector('#image').setAttribute("src",`${data.avatar_url}`);
+            document.querySelector('h4').innerHTML = `${data.name}, Follwers : ${data.followers}`
+            document.querySelector('h4').style.fontWeight = `bold`
+            document.querySelector('p').innerHTML = `${data.bio} ${data.html_url}`
+        }     
+    }
+
+    //sending the request
+    xhr.send();
+    
+
+
+
+</script>
+</body>
+</html>
