@@ -89,7 +89,8 @@ consumePromiseFive()
 
 
 
-//fetch
+//fetch API
+//The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 // async function getAllUsers() {
 //     try {
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -103,6 +104,8 @@ consumePromiseFive()
 // getAllUsers()
 
 //
+
+
 fetch('https://api.github.com/users/ahmadhamesh')
 .then((response) => {
     return response.json()
@@ -113,4 +116,8 @@ fetch('https://api.github.com/users/ahmadhamesh')
 })
 .catch((error) => console.log(error))
 
- 
+
+ //https://blog.logrocket.com/fetch-api-node-js/
+
+//  fetch interview question
+//A fetch() promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error. A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors (404, 504, etc.). Instead, a then() handler must check the Response.ok and/or Response.status properties.
